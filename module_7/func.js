@@ -58,3 +58,4 @@ function passwordCheck(pass) {
 
 passwordCheck("quesry") // false
 passwordCheck("'qwerty123'") // true
+
