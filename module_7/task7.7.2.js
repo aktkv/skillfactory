@@ -3,20 +3,14 @@
 // Используйте метод apply, чтобы вызвать функцию calculate с передачей объекта со значениями a, b и operator в качестве первого аргумента и массива с тремя значениями [2, 3, "+"] в качестве второго аргумента.
 
 function calculate(a, b, operator) {
-    let result;
-    switch(operator) {
-        case "+":
-            result = a + b;
-            break;
-        case "-":
-            result = a - b;
-            break;
-        case "*":
-            result = a * b;
-            break;
-        case "/":
-            result = a / b;
-            break;
+    if (operator === '+') {
+        return a + b
+    } else if (operator === '-') {
+        return a - b
+    } else if (operator === '*') {
+        return a * b
+    } else if (operator === '/') {
+        return a / b
     }
     return result;
 }
