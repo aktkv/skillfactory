@@ -3,23 +3,24 @@
 // Используйте метод apply, чтобы вызвать функцию calculate с передачей объекта со значениями a, b и operator в качестве первого аргумента и массива с тремя значениями [2, 3, "+"] в качестве второго аргумента.
 
 function calculate(a, b, operator) {
-    return operator(a, b);
+    let result;
+    switch(operator) {
+        case "+":
+            result = a + b;
+            break;
+        case "-":
+            result = a - b;
+            break;
+        case "*":
+            result = a * b;
+            break;
+        case "/":
+            result = a / b;
+            break;
+    }
+    return result;
 }
 
-function add(a, b) {
-    return a + b;
-}
+let result = calculate.apply(null, [2, 3, "+"]);
 
-function subtract(a, b) {
-    return a - b;
-}
-
-function multiply(a, b) {
-    return a * b;
-}
-
-function multiply(a, b) {
-    return a * b;
-}
-
-calculate.apply(this, [2, 3, "+"])
+console.log(result);

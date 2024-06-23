@@ -3,13 +3,13 @@
 // Создайте объект person с двумя свойствами: name и age.
 // Используйте метод call, чтобы вызвать функцию printInfo от имени объекта person.
 
-
-function printInfo(name, age) {
-    return name, age
+function printInfo() {
+    console.log("Name: " + this.name + ", Age: " + this.age);
 }
 
-let person = {
-    name: ['Ваня' , 'Саша'], 
-    age:  ['23','32']
-}
-let jediUser = createUser('Оби-ван Кеноби', 74)
+var person = {
+    name: "Alina",
+    age: 26
+};
+
+printInfo.call(person);
