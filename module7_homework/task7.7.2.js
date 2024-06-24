@@ -15,6 +15,6 @@ function calculate(a, b, operator) {
     return result;
 }
 
-let result = calculate.apply(null, [2, 3, "+"]);
+const result = calculate.apply(null, [2, 3, "+"]); ; // let здесь не имеет смысла  
 
 console.log(result);
