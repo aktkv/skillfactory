@@ -7,7 +7,7 @@ function printInfo() {
     console.log("Name: " + this.name + ", Age: " + this.age);
 }
 
-var person = {
+const person = { // никогда не используйте var, это устаревший синтаксис 
     name: "Alina",
     age: 26
 };
