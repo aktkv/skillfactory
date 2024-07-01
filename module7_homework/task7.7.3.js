@@ -3,16 +3,16 @@
 // Затем создайте новый массив, содержащий только свойства name (имя) каждого пользователя.
 
 
-let users = [
+const users = [
     { name: 'Алина', age: 22 },
     { name: 'Дмитрий', age: 17 },
     { name: 'Владимир', age: 29 },
     { name: 'Кира', age: 15 }
 ];
 
-let adultUsers = users.filter(user => user.age >= 18);
+const adultUsers = users.filter(user => user.age >= 18);
 
-let userNames = adultUsers.map(user => user.name);
+const userNames = adultUsers.map(user => user.name);
 
 console.log(adultUsers); 
 console.log(userNames);
