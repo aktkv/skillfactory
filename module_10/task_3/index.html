@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 3.</title>
+    <link rel="stylesheet" href="slyle.css">
+</head>
+
+<body>
+    <p>Этап 1. Реализовать чат на основе эхо-сервера wss://echo-ws-service.herokuapp.com.<br>
+        Интерфейс состоит из input, куда вводится текст сообщения, и кнопки «Отправить».<br>
+        При клике на кнопку «Отправить» сообщение должно появляться в окне переписки.<br>
+        Эхо-сервер будет отвечать вам тем же сообщением, его также необходимо выводить в чат:<br>
+        Добавить в чат механизм отправки гео-локации</p>
+
+        <div class="container">
+            <div class="chat-container">
+                <input type="text" class="chat-messages" placeholder="Здесь вводится текст сообщения">
+                <button class="btn btn-submit">Отправить</button>
+                <button class="btn btn-geo">Гео-локация</button>
+            </div>
+            <div class="chat-window"></div>
+        </div> 
+    <script src="script.js"></script>
+</body>
+
+</html>
