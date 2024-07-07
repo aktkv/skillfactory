@@ -3,11 +3,10 @@ const sendBtn = document.querySelector(".btn-submit");
 const sendGeo = document.querySelector(".btn-geo");
 const chat = document.querySelector(".chat-window");
 const echoUrl = "wss://echo-ws-service.herokuapp.com";
-let echoMessage;
-echoMessage = new WebSocket(echoUrl);
+let echoMessage = new WebSocket(echoUrl);
 
 function writeMessage (message, className){
-    let pre = document.createElement("p");
+    const pre = document.createElement("p");
     const chatContainer = chat
     pre.classList.add("myMessage", className);
     pre.textContent = message;
@@ -30,12 +29,11 @@ echoMessage.onmessage = function (evt)  {
 
 function writeGeo (coords, className){
     let linkGeo = document.createElement("a");
-    const chatContainer = chat
     linkGeo.classList.add("myMessage", className);
     linkGeo.textContent = 'Гео-локация';
     linkGeo.href = `https://www.openstreetmap.org/#map=18/${coords.latitude}/${coords.longitude}`;
     linkGeo.target = "_blank";
-    chatContainer.appendChild(linkGeo);
+    chat.appendChild(linkGeo);
 }
 
 sendGeo.addEventListener('click', () => {
